@@ -5,7 +5,7 @@ export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'file-browser' },
   {
     path: 'file-browser',
-    loadChildren: './file-browser/file-browser.module#FileBrowserModule',
+    loadChildren: '../file-browser/file-browser.module#FileBrowserModule',
   },
 ];
 
