@@ -18,6 +18,7 @@ export class FileBrowserComponent implements OnInit {
 
   ngOnInit() {
     this.data$ = this.store.select(fromStore.getAllFileTrees);
+    this.store.dispatch(new fromStore.LoadFileTree());
   }
 
 }

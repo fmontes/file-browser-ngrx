@@ -9,17 +9,7 @@ export interface FileTreeItemState {
 }
 
 export const initialState: FileTreeItemState = {
-  data: [
-    {
-      identifier: 'ddc3b60a-df3d-4554-a0f3-90f3c7c276b8',
-      fileName: 'sit',
-      extension: 'docx',
-      modDate: 'Fri Oct 11 2013 22:16:36 GMT+0000 (UTC)',
-      title: 'cillum incididunt cupidatat',
-      fileSize: 2422,
-      path: ''
-    }
-  ],
+  data: [],
   loaded: false,
   loading: false
 };
@@ -38,10 +28,13 @@ export function reducer(
     }
 
     case fromFileTree.LOAD_FILE_TREE_SUCCESS: {
+      const data = action.payload;
+
       return {
         ...state,
         loading: false,
-        loaded: true
+        loaded: true,
+        data
       };
     }
 
