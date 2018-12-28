@@ -1,16 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FileTreeItem } from '../../models/file-tree-item.model';
 
-interface File {
-  identifier: string;
-  fileName: string;
-  extension: string;
-  modDate: string;
-  title: string;
-  fileSize: number;
-  path: string;
-}
-
-const ELEMENT_DATA: File[] = [
+const ELEMENT_DATA: FileTreeItem[] = [
   {
     identifier: 'ddc3b60a-df3d-4554-a0f3-90f3c7c276b8',
     fileName: 'sit',
@@ -64,10 +55,12 @@ const ELEMENT_DATA: File[] = [
   styleUrls: ['./folder-content.component.scss']
 })
 export class FolderContentComponent implements OnInit {
+  @Input() data: FileTreeItem[];
+
   displayedColumns: string[] = ['title', 'modDate', 'fileSize'];
-  dataSource = ELEMENT_DATA;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
