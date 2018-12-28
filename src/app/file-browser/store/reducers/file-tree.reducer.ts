@@ -3,38 +3,46 @@ import { FileTreeItem } from '../../models/file-tree-item.model';
 
 // Represent a section of the full state
 export interface FileTreeItemState {
-  data: FileTreeItem[];
+  entities: { [id: string]: FileTreeItem };
   loaded: boolean;
   loading: boolean;
 }
 
 export const initialState: FileTreeItemState = {
-  data: [],
+  entities: {},
   loaded: false,
   loading: false
 };
 
-export function reducer(
-  state = initialState,
-  action: fromFileTree.FileTreeAction
-): FileTreeItemState {
-
+export function reducer(state = initialState, action: fromFileTree.FileTreeAction): FileTreeItemState {
   switch (action.type) {
     case fromFileTree.LOAD_FILE_TREE: {
       return {
         ...state,
-        loading: true,
+        loading: true
       };
     }
 
     case fromFileTree.LOAD_FILE_TREE_SUCCESS: {
-      const data = action.payload;
+      const fileTreeItems = action.payload;
+
+      const entities = fileTreeItems.reduce(
+        (items: { [id: string]: FileTreeItem }, fileTreeItem: FileTreeItem) => {
+          return {
+            ...items,
+            [fileTreeItem.identifier]: fileTreeItem
+          };
+        },
+        {
+          ...state.entities
+        }
+      );
 
       return {
         ...state,
         loading: false,
         loaded: true,
-        data
+        entities
       };
     }
 
@@ -53,4 +61,4 @@ export function reducer(
 // selector functions
 export const getFileTreeLoading = (state: FileTreeItemState) => state.loading;
 export const getFileTreeLoaded = (state: FileTreeItemState) => state.loaded;
-export const getFileTrees = (state: FileTreeItemState) => state.data;
+export const getFileTreesEntities = (state: FileTreeItemState) => state.entities;

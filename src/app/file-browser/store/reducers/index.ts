@@ -1,6 +1,8 @@
 import { ActionReducerMap, createSelector, createFeatureSelector } from '@ngrx/store';
 
 import * as fromFileTree from './file-tree.reducer';
+import { FileTreeItem } from '../../models/file-tree-item.model';
+import { map } from 'rxjs/operators';
 
 export interface FileBrowserState {
   fileTree: fromFileTree.FileTreeItemState;
@@ -22,6 +24,7 @@ export const reducers: ActionReducerMap<FileBrowserState> = {
   }
 */
 
+// SELECTORS
 // create base level of state object: 'file-browser'
 export const getFileBrowserState = createFeatureSelector<FileBrowserState>('file-browser');
 
@@ -32,14 +35,23 @@ export const getFileTreeState = createSelector(
 );
 
 // get the file trees from the state
-export const getAllFileTrees = createSelector(
+export const getFileTreesEntities = createSelector(
   getFileTreeState,
-  fromFileTree.getFileTrees
+  fromFileTree.getFileTreesEntities
 );
+
+export const getAllFileTrees = createSelector(
+  getFileTreesEntities,
+  (entities: {[id: string]: FileTreeItem}) => {
+    return Object.keys(entities).map((id: string) => entities[id]);
+  }
+);
+
 export const getFileTreesLoading = createSelector(
   getFileTreeState,
   fromFileTree.getFileTreeLoading
 );
+
 export const getFileTreesLoaded = createSelector(
   getFileTreeState,
   fromFileTree.getFileTreeLoaded
