@@ -4,12 +4,12 @@ import * as fromTreeFile from './tree-file.reducer';
 import * as fromFolders from './folders.reducer';
 
 export interface FileBrowserState {
-  treeFile: fromTreeFile.TreeFileItemState;
+  files: fromTreeFile.TreeFileItemState;
   folders: fromFolders.FolderItemState;
 }
 
 export const reducers: ActionReducerMap<FileBrowserState> = {
-  treeFile: fromTreeFile.reducer,
+  files: fromTreeFile.reducer,
   folders: fromFolders.reducer
 };
 

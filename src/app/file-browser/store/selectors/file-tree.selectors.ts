@@ -10,7 +10,7 @@ import { RouterStateUrl } from '../../../_main/store';
 /*
   state = {
     file-browser: {
-      treeFile: {
+      files: {
         ...
       }
     }
@@ -20,7 +20,7 @@ import { RouterStateUrl } from '../../../_main/store';
 // get the state inside the feature: file-browser
 export const getTreeFileState = createSelector(
   fromFeature.getFileBrowserState,
-  (state: fromFeature.FileBrowserState) => state.treeFile
+  (state: fromFeature.FileBrowserState) => state.files
 );
 
 // get the file trees from the state
