@@ -8,7 +8,7 @@ export const FILES: TreeFileItem[] = [
     modDate: 'Thu May 17 1990 01:20:42 GMT+0000 (UTC)',
     title: 'labore nisi pariatur',
     fileSize: 3638,
-    path: '',
+    path: '/',
     type: TreeAssetType.FILE
   },
   {
@@ -18,7 +18,7 @@ export const FILES: TreeFileItem[] = [
     modDate: 'Fri Jun 04 2004 00:59:49 GMT+0000 (UTC)',
     title: 'do tempor id',
     fileSize: 2214,
-    path: '',
+    path: '/',
     type: TreeAssetType.FILE,
   },
   {
@@ -28,7 +28,7 @@ export const FILES: TreeFileItem[] = [
     modDate: 'Fri Feb 17 1989 02:52:49 GMT+0000 (UTC)',
     title: 'occaecat dolor eiusmod',
     fileSize: 3905,
-    path: '',
+    path: '/',
     type: TreeAssetType.FILE,
   },
   {
@@ -38,7 +38,7 @@ export const FILES: TreeFileItem[] = [
     modDate: 'Sun Sep 25 1977 07:49:40 GMT+0000 (UTC)',
     title: 'eu minim ex',
     fileSize: 3296,
-    path: '',
+    path: '/',
     type: TreeAssetType.FILE,
   },
   {
@@ -46,9 +46,9 @@ export const FILES: TreeFileItem[] = [
     name: 'ex',
     extension: 'pdf',
     modDate: 'Thu Apr 13 1995 20:22:48 GMT+0000 (UTC)',
-    title: 'dolor aliqua nulla',
+    title: 'This is file inside magna folder',
     fileSize: 1616,
-    path: '',
+    path: '/magna',
     type: TreeAssetType.FILE,
   },
   {
@@ -56,9 +56,9 @@ export const FILES: TreeFileItem[] = [
     name: 'voluptate',
     extension: 'js',
     modDate: 'Mon Jun 15 2009 04:34:01 GMT+0000 (UTC)',
-    title: 'aute ex anim',
+    title: 'This is a file inside culpa folder',
     fileSize: 1789,
-    path: '',
+    path: '/culpa',
     type: TreeAssetType.FILE,
   },
   {
@@ -66,9 +66,9 @@ export const FILES: TreeFileItem[] = [
     name: 'pariatur',
     extension: 'jpg',
     modDate: 'Thu Dec 03 1987 01:36:32 GMT+0000 (UTC)',
-    title: 'tempor anim laborum',
+    title: 'This file is inside adipisicing',
     fileSize: 1211,
-    path: '',
+    path: '/adipisicing',
     type: TreeAssetType.FILE,
   },
   {
@@ -76,9 +76,9 @@ export const FILES: TreeFileItem[] = [
     name: 'labore',
     extension: 'pdf',
     modDate: 'Fri Jun 06 2008 06:11:07 GMT+0000 (UTC)',
-    title: 'id deserunt tempor',
+    title: 'File in aliqua folder',
     fileSize: 3489,
-    path: '',
+    path: 'aliqua',
     type: TreeAssetType.FILE,
   },
   {
@@ -86,9 +86,9 @@ export const FILES: TreeFileItem[] = [
     name: 'sit',
     extension: 'docx',
     modDate: 'Mon Sep 12 1977 19:09:46 GMT+0000 (UTC)',
-    title: 'laborum proident fugiat',
+    title: 'A lorem file',
     fileSize: 3726,
-    path: '',
+    path: '/lorem',
     type: TreeAssetType.FILE,
   },
   {
@@ -96,9 +96,9 @@ export const FILES: TreeFileItem[] = [
     name: 'est',
     extension: 'docx',
     modDate: 'Thu Apr 05 1973 01:41:57 GMT+0000 (UTC)',
-    title: 'amet ullamco amet',
+    title: 'Im inside nisi',
     fileSize: 2131,
-    path: '',
+    path: '/nisi',
     type: TreeAssetType.FOLDER,
   },
   {
@@ -106,9 +106,9 @@ export const FILES: TreeFileItem[] = [
     name: 'eu',
     extension: 'html',
     modDate: 'Tue Aug 17 1999 15:19:30 GMT+0000 (UTC)',
-    title: 'velit magna consequat',
+    title: 'Im inside magna',
     fileSize: 3875,
-    path: '',
+    path: '/magna',
     type: TreeAssetType.FILE,
   },
   {
@@ -116,9 +116,9 @@ export const FILES: TreeFileItem[] = [
     name: 'excepteur',
     extension: 'html',
     modDate: 'Thu Jan 17 1991 09:10:17 GMT+0000 (UTC)',
-    title: 'sunt in mollit',
+    title: 'An adipisicing file',
     fileSize: 1409,
-    path: '',
+    path: 'adipisicing',
     type: TreeAssetType.FILE
   },
   {
@@ -126,9 +126,9 @@ export const FILES: TreeFileItem[] = [
     name: 'incididunt',
     extension: 'js',
     modDate: 'Fri Nov 08 1974 04:36:38 GMT+0000 (UTC)',
-    title: 'ex aute veniam',
+    title: 'I live in aliqua',
     fileSize: 3461,
-    path: '',
+    path: '/aliqua',
     type: TreeAssetType.FILE
   },
   {
@@ -136,9 +136,9 @@ export const FILES: TreeFileItem[] = [
     name: 'est',
     extension: 'txt',
     modDate: 'Wed Feb 14 1973 16:56:56 GMT+0000 (UTC)',
-    title: 'eu aute commodo',
+    title: 'Hey Im with lorem',
     fileSize: 2850,
-    path: '',
+    path: '/lorem',
     type: TreeAssetType.FILE
   },
   {
@@ -146,9 +146,9 @@ export const FILES: TreeFileItem[] = [
     name: 'sint',
     extension: 'js',
     modDate: 'Sun Jun 02 1985 14:10:25 GMT+0000 (UTC)',
-    title: 'veniam commodo ex',
+    title: 'Nisi party',
     fileSize: 3533,
-    path: '',
+    path: '/nisi',
     type: TreeAssetType.FILE
   },
   {
@@ -266,37 +266,37 @@ export const FILES: TreeFileItem[] = [
 export const FOLDERS: FolderItem[] = [
   {
     identifier: '2e12010a-f61a-40df-82b9-8de5615fda6d',
-    name: 'magna',
+    name: 'Magna',
     modDate: 'Tue Jun 23 1970 13:06:40 GMT+0000 (UTC)',
     title: 'consectetur exercitation ex',
-    path: '',
+    path: '/magna',
     type: TreeAssetType.FOLDER,
     showOnMenu: true
   },
   {
     identifier: 'c383b428-aab7-4642-99e5-528c32fd1db9',
-    name: 'culpa',
+    name: 'Culpa',
     modDate: 'Wed Jun 15 2011 08:34:35 GMT+0000 (UTC)',
     title: 'aliquip nulla adipisicing',
-    path: '',
+    path: '/culpa',
     type: TreeAssetType.FOLDER,
     showOnMenu: true
   },
   {
     identifier: '5a177c9e-6d2a-4b87-b45a-80dd8e4e1e03',
-    name: 'adipisicing',
+    name: 'Adipisicing',
     modDate: 'Thu May 28 1998 02:57:04 GMT+0000 (UTC)',
     title: 'sunt id officia',
-    path: '',
+    path: '/adipisicing',
     type: TreeAssetType.FOLDER,
     showOnMenu: true
   },
   {
     identifier: '9c36258c-e6ed-4cf9-8c01-ffb71180e017',
-    name: 'aliqua',
+    name: 'Aliqua',
     modDate: 'Mon Feb 20 1995 20:55:19 GMT+0000 (UTC)',
     title: 'non eu consectetur',
-    path: '',
+    path: '/aliqua',
     type: TreeAssetType.FOLDER,
     showOnMenu: false
   },
@@ -305,78 +305,15 @@ export const FOLDERS: FolderItem[] = [
     name: 'Lorem',
     modDate: 'Thu Jul 31 1975 15:45:04 GMT+0000 (UTC)',
     title: 'voluptate nulla eiusmod',
-    path: '',
+    path: '/lorem',
     type: TreeAssetType.FOLDER,
     showOnMenu: false
   },
   {
     identifier: 'd01d8fcd-e714-4613-a8af-88201613d425',
-    name: 'nisi',
+    name: 'Nisi',
     modDate: 'Fri Jun 30 1978 21:19:18 GMT+0000 (UTC)',
     title: 'excepteur id quis',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: '3f889e1b-e863-4c9e-8047-f629f228e3ae',
-    name: 'enim',
-    modDate: 'Sun Feb 25 2001 23:40:53 GMT+0000 (UTC)',
-    title: 'ad laborum aute',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: '6113f0b7-4c1f-4128-839b-455ef50d688c',
-    name: 'deserunt',
-    modDate: 'Wed Nov 10 1971 13:22:35 GMT+0000 (UTC)',
-    title: 'aute excepteur ullamco',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: 'dc2745b7-fbe4-44cd-aba0-41694b1c3990',
-    name: 'eu',
-    modDate: 'Wed May 31 2000 19:19:50 GMT+0000 (UTC)',
-    title: 'ad labore incididunt',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: 'e5958620-ea8a-4e12-9746-57c85963ef3f',
-    name: 'consequat',
-    modDate: 'Sun Sep 18 1994 22:02:14 GMT+0000 (UTC)',
-    title: 'aute Lorem reprehenderit',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: true
-  },
-  {
-    identifier: '6c1059a1-08ed-45d1-b2c9-e3b9fa230a99',
-    name: 'laboris',
-    modDate: 'Sun Aug 03 2008 14:18:08 GMT+0000 (UTC)',
-    title: 'amet nostrud eu',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: '856bebba-92a4-472b-9e4a-c1b61145e341',
-    name: 'officia',
-    modDate: 'Fri Jun 27 1986 16:11:56 GMT+0000 (UTC)',
-    title: 'proident tempor fugiat',
-    path: '',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
-  },
-  {
-    identifier: 'a1a82dfc-25c2-40b7-847c-b3588389643a',
-    name: 'fugiat',
-    modDate: 'Mon Oct 12 2009 22:24:18 GMT+0000 (UTC)',
-    title: 'labore in qui',
     path: '',
     type: TreeAssetType.FOLDER,
     showOnMenu: false

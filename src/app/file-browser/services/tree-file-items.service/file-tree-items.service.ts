@@ -10,7 +10,7 @@ export class TreeFileItemsService {
 
   constructor() { }
 
-  getItems(): Observable<TreeFileItem[]> {
-    return of(FILES);
+  getItems(path: string = '/'): Observable<TreeFileItem[]> {
+    return of(FILES.filter((files: TreeFileItem) => files.path === path));
   }
 }
