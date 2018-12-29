@@ -2,9 +2,9 @@ import { Action } from '@ngrx/store';
 import { TreeFileItem } from '../../models';
 
 // load files structure
-export const LOAD_FILE_TREE = '[File Tree] Load File Tree';
-export const LOAD_FILE_TREE_FAIL = '[File Tree] Load File Tree Fail';
-export const LOAD_FILE_TREE_SUCCESS = '[File Tree] Load File Tree Success';
+export const LOAD_FILE_TREE = '[File Browser] Load File Tree';
+export const LOAD_FILE_TREE_FAIL = '[File Browser] Load File Tree Fail';
+export const LOAD_FILE_TREE_SUCCESS = '[File Browser] Load File Tree Success';
 
 // define action creator
 export class LoadTreeFile implements Action {
