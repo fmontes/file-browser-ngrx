@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "site-browser-ngrx": {
+    "file-browser-ngrx": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/site-browser-ngrx",
+            "outputPath": "dist/file-browser-ngrx",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "site-browser-ngrx:build"
+            "browserTarget": "file-browser-ngrx:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "site-browser-ngrx:build:production"
+              "browserTarget": "file-browser-ngrx:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "site-browser-ngrx:build"
+            "browserTarget": "file-browser-ngrx:build"
           }
         },
         "test": {
@@ -108,7 +108,7 @@
         }
       }
     },
-    "site-browser-ngrx-e2e": {
+    "file-browser-ngrx-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -117,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "site-browser-ngrx:serve"
+            "devServerTarget": "file-browser-ngrx:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "site-browser-ngrx:serve:production"
+              "devServerTarget": "file-browser-ngrx:serve:production"
             }
           }
         },
@@ -137,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "site-browser-ngrx"
+  "defaultProject": "file-browser-ngrx"
 }

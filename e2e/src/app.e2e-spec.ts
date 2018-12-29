@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to site-browser-ngrx!');
+    expect(page.getTitleText()).toEqual('Welcome to file-browser-ngrx!');
   });
 });
