@@ -1,1 +1,2 @@
-export * from './file-tree.action';
+export * from './tree-file.action';
+export * from './folders.action';

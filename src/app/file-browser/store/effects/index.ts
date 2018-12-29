@@ -1,5 +1,7 @@
-import { FileTreeEffects } from './file-tree.effect';
+import { TreeFileEffects } from './tree-file.effects';
+import { FoldersEffects } from './folders.effects';
 
-export const effects: any[] = [FileTreeEffects];
+export const effects: any[] = [TreeFileEffects, FoldersEffects];
 
-export * from './file-tree.effect';
+export * from './tree-file.effects';
+export * from './folders.effects';

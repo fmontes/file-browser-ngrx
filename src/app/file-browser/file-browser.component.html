@@ -1,2 +1,2 @@
-<app-folder-tree></app-folder-tree>
-<app-folder-content [data]="data$ | async"></app-folder-content>
+<app-folder-tree [data]="folders$ | async"></app-folder-tree>
+<app-folder-content [data]="treeFiles$ | async"></app-folder-content>

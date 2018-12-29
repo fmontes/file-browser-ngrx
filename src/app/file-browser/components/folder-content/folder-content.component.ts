@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FileTreeItem } from '../../models/file-tree-item.model';
+import { TreeFileItem } from '../../models/tree-file-item.model';
 
 @Component({
   selector: 'app-folder-content',
@@ -7,7 +7,7 @@ import { FileTreeItem } from '../../models/file-tree-item.model';
   styleUrls: ['./folder-content.component.scss']
 })
 export class FolderContentComponent implements OnInit {
-  @Input() data: FileTreeItem[];
+  @Input() data: TreeFileItem[];
 
   displayedColumns: string[] = ['title', 'modDate', 'fileSize'];
 

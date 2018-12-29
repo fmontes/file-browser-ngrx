@@ -4,7 +4,8 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import * as fromStore from './store';
-import { FileTreeItem } from './models/file-tree-item.model';
+import { TreeFileItem } from './models/tree-file-item.model';
+import { FolderItem } from './models';
 
 @Component({
   selector: 'app-file-browser',
@@ -12,13 +13,17 @@ import { FileTreeItem } from './models/file-tree-item.model';
   styleUrls: ['./file-browser.component.scss']
 })
 export class FileBrowserComponent implements OnInit {
-  data$: Observable<FileTreeItem[]>;
+  treeFiles$: Observable<TreeFileItem[]>;
+  folders$: Observable<FolderItem[]>;
 
   constructor(private store: Store<fromStore.FileBrowserState>) { }
 
   ngOnInit() {
-    this.data$ = this.store.select(fromStore.getAllFileTrees);
-    this.store.dispatch(new fromStore.LoadFileTree());
+    this.treeFiles$ = this.store.select(fromStore.getAllTreeFiles);
+    this.folders$ = this.store.select(fromStore.getAllFolders);
+
+    this.store.dispatch(new fromStore.LoadTreeFile());
+    this.store.dispatch(new fromStore.LoadFolders());
   }
 
 }

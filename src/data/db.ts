@@ -1,49 +1,384 @@
-import { FileTreeItem } from 'src/app/file-browser/models/file-tree-item.model';
+import { TreeAssetType, TreeFileItem, FolderItem } from 'src/app/file-browser/models';
 
-export const ELEMENT_DATA: FileTreeItem[] = [
+export const FILES: TreeFileItem[] = [
   {
-    identifier: 'ddc3b60a-df3d-4554-a0f3-90f3c7c276b8',
-    fileName: 'sit',
-    extension: 'docx',
-    modDate: 'Fri Oct 11 2013 22:16:36 GMT+0000 (UTC)',
-    title: 'cillum incididunt cupidatat',
-    fileSize: 2422,
-    path: ''
-  },
-  {
-    identifier: '56120f14-7981-4c7f-865f-f4a7a8ff026f',
-    fileName: 'mollit',
-    extension: 'js',
-    modDate: 'Thu Nov 14 1996 13:36:39 GMT+0000 (UTC)',
-    title: 'sunt pariatur ullamco',
-    fileSize: 1651,
-    path: ''
-  },
-  {
-    identifier: 'ce2b3873-2130-4d5f-a598-a2f6d9cc64d9',
-    fileName: 'amet',
+    identifier: '0f38f1b6-f851-40ea-92db-18c41e3d9490',
+    name: 'ullamco',
     extension: 'html',
-    modDate: 'Fri Sep 16 2005 03:46:17 GMT+0000 (UTC)',
-    title: 'velit ut dolor',
-    fileSize: 2685,
-    path: ''
+    modDate: 'Thu May 17 1990 01:20:42 GMT+0000 (UTC)',
+    title: 'labore nisi pariatur',
+    fileSize: 3638,
+    path: '',
+    type: TreeAssetType.FILE
   },
   {
-    identifier: 'a3f9a51b-4830-403c-bec3-7ffc4e3da9c2',
-    fileName: 'dolor',
+    identifier: '6fddef84-b9cb-4ce6-a12b-272490e124bb',
+    name: 'adipisicing',
+    extension: 'jpg',
+    modDate: 'Fri Jun 04 2004 00:59:49 GMT+0000 (UTC)',
+    title: 'do tempor id',
+    fileSize: 2214,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: '9fd17b26-ef16-4677-8a86-9827befe21ab',
+    name: 'nostrud',
+    extension: 'docx',
+    modDate: 'Fri Feb 17 1989 02:52:49 GMT+0000 (UTC)',
+    title: 'occaecat dolor eiusmod',
+    fileSize: 3905,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: '80460ffb-57ac-4196-9058-15fa865be16b',
+    name: 'deserunt',
+    extension: 'pdf',
+    modDate: 'Sun Sep 25 1977 07:49:40 GMT+0000 (UTC)',
+    title: 'eu minim ex',
+    fileSize: 3296,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: 'e3e9acda-951c-4e55-80eb-f65b83852aab',
+    name: 'ex',
+    extension: 'pdf',
+    modDate: 'Thu Apr 13 1995 20:22:48 GMT+0000 (UTC)',
+    title: 'dolor aliqua nulla',
+    fileSize: 1616,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: 'bd248af9-1260-4e2d-b2f2-966f35718a9c',
+    name: 'voluptate',
     extension: 'js',
-    modDate: 'Tue Aug 22 2000 20:57:59 GMT+0000 (UTC)',
-    title: 'mollit nulla esse',
-    fileSize: 3068,
-    path: ''
+    modDate: 'Mon Jun 15 2009 04:34:01 GMT+0000 (UTC)',
+    title: 'aute ex anim',
+    fileSize: 1789,
+    path: '',
+    type: TreeAssetType.FILE,
   },
   {
-    identifier: 'bb69a3f9-9f66-47f6-9332-71de650e043b',
-    fileName: 'est',
+    identifier: 'd0217189-beaa-4013-8b12-d611e58fc320',
+    name: 'pariatur',
+    extension: 'jpg',
+    modDate: 'Thu Dec 03 1987 01:36:32 GMT+0000 (UTC)',
+    title: 'tempor anim laborum',
+    fileSize: 1211,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: '72450ba3-2184-4801-b207-6a34f49c7124',
+    name: 'labore',
+    extension: 'pdf',
+    modDate: 'Fri Jun 06 2008 06:11:07 GMT+0000 (UTC)',
+    title: 'id deserunt tempor',
+    fileSize: 3489,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: '938bd915-c463-4f47-b3f6-f3d23604a627',
+    name: 'sit',
+    extension: 'docx',
+    modDate: 'Mon Sep 12 1977 19:09:46 GMT+0000 (UTC)',
+    title: 'laborum proident fugiat',
+    fileSize: 3726,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: 'e28f5a84-64db-4ad6-b321-f4c897869f5f',
+    name: 'est',
+    extension: 'docx',
+    modDate: 'Thu Apr 05 1973 01:41:57 GMT+0000 (UTC)',
+    title: 'amet ullamco amet',
+    fileSize: 2131,
+    path: '',
+    type: TreeAssetType.FOLDER,
+  },
+  {
+    identifier: '8022fc46-8548-4615-97ef-615d339a062f',
+    name: 'eu',
+    extension: 'html',
+    modDate: 'Tue Aug 17 1999 15:19:30 GMT+0000 (UTC)',
+    title: 'velit magna consequat',
+    fileSize: 3875,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: 'a956c83b-5f3b-4e09-bf76-ca184d5f1000',
+    name: 'excepteur',
+    extension: 'html',
+    modDate: 'Thu Jan 17 1991 09:10:17 GMT+0000 (UTC)',
+    title: 'sunt in mollit',
+    fileSize: 1409,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'e9c08473-3bf7-4593-80f0-bc0dbe3a3866',
+    name: 'incididunt',
+    extension: 'js',
+    modDate: 'Fri Nov 08 1974 04:36:38 GMT+0000 (UTC)',
+    title: 'ex aute veniam',
+    fileSize: 3461,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '66c40bed-4362-49dd-bde0-2b9a996787a2',
+    name: 'est',
     extension: 'txt',
-    modDate: 'Wed Mar 29 1978 15:05:55 GMT+0000 (UTC)',
-    title: 'ex pariatur sit',
-    fileSize: 3092,
-    path: ''
+    modDate: 'Wed Feb 14 1973 16:56:56 GMT+0000 (UTC)',
+    title: 'eu aute commodo',
+    fileSize: 2850,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '7cd02f67-1114-4b25-93b7-74020b905294',
+    name: 'sint',
+    extension: 'js',
+    modDate: 'Sun Jun 02 1985 14:10:25 GMT+0000 (UTC)',
+    title: 'veniam commodo ex',
+    fileSize: 3533,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '7af961a1-914b-4882-bf3b-3724c7bc388a',
+    name: 'nulla',
+    extension: 'pdf',
+    modDate: 'Sat Sep 12 2009 04:42:00 GMT+0000 (UTC)',
+    title: 'velit magna elit',
+    fileSize: 3666,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '90816ed3-922a-418d-ac04-a521c9d459b8',
+    name: 'est',
+    extension: 'html',
+    modDate: 'Sat Apr 16 2005 18:24:22 GMT+0000 (UTC)',
+    title: 'dolore nisi nulla',
+    fileSize: 2485,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '4580fe7c-1c9e-4337-9d47-afeef2571fd6',
+    name: 'amet',
+    extension: 'docx',
+    modDate: 'Sun Jul 15 1979 14:06:38 GMT+0000 (UTC)',
+    title: 'laborum sunt qui',
+    fileSize: 2436,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'fb5e21ea-0b20-446c-af7d-27a8a70deab8',
+    name: 'proident',
+    extension: 'pdf',
+    modDate: 'Wed Jul 16 2003 05:27:35 GMT+0000 (UTC)',
+    title: 'ea reprehenderit deserunt',
+    fileSize: 3907,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '9e3cdb72-3380-4d09-a244-087042a13461',
+    name: 'proident',
+    extension: 'pdf',
+    modDate: 'Sat Sep 17 1977 07:51:34 GMT+0000 (UTC)',
+    title: 'magna exercitation exercitation',
+    fileSize: 3032,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'b90dc524-1949-482b-a139-bc627e751499',
+    name: 'irure',
+    extension: 'js',
+    modDate: 'Thu May 08 2008 06:49:34 GMT+0000 (UTC)',
+    title: 'laboris anim minim',
+    fileSize: 2838,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'aea584cf-35d7-4f99-9d69-ef676b2a9b7e',
+    name: 'consectetur',
+    extension: 'js',
+    modDate: 'Tue Jul 15 1986 20:36:44 GMT+0000 (UTC)',
+    title: 'nostrud consectetur exercitation',
+    fileSize: 2931,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'f7d3433a-1a08-427e-a8b5-abac1d967390',
+    name: 'in',
+    extension: 'html',
+    modDate: 'Thu Aug 19 2004 02:14:02 GMT+0000 (UTC)',
+    title: 'consequat eu irure',
+    fileSize: 1027,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: 'ffb58352-9bc2-4b4f-8d7c-c1aaf23dabf1',
+    name: 'magna',
+    extension: 'html',
+    modDate: 'Sun Apr 05 2009 17:26:43 GMT+0000 (UTC)',
+    title: 'sit voluptate deserunt',
+    fileSize: 1581,
+    path: '',
+    type: TreeAssetType.FILE
+  },
+  {
+    identifier: '7b89dcf4-b2ed-487f-aa5a-0d33fd371adf',
+    name: 'et',
+    extension: 'docx',
+    modDate: 'Sat May 24 2008 07:52:37 GMT+0000 (UTC)',
+    title: 'consequat aute esse',
+    fileSize: 2325,
+    path: '',
+    type: TreeAssetType.FILE,
+  },
+  {
+    identifier: 'd0456361-5066-4765-86b4-e93e91755390',
+    name: 'pariatur',
+    extension: 'txt',
+    modDate: 'Sun Mar 26 2017 13:07:45 GMT+0000 (UTC)',
+    title: 'aliqua cillum mollit',
+    fileSize: 1452,
+    path: '',
+    type: TreeAssetType.FILE,
+  }
+];
+
+export const FOLDERS: FolderItem[] = [
+  {
+    identifier: '2e12010a-f61a-40df-82b9-8de5615fda6d',
+    name: 'magna',
+    modDate: 'Tue Jun 23 1970 13:06:40 GMT+0000 (UTC)',
+    title: 'consectetur exercitation ex',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: true
+  },
+  {
+    identifier: 'c383b428-aab7-4642-99e5-528c32fd1db9',
+    name: 'culpa',
+    modDate: 'Wed Jun 15 2011 08:34:35 GMT+0000 (UTC)',
+    title: 'aliquip nulla adipisicing',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: true
+  },
+  {
+    identifier: '5a177c9e-6d2a-4b87-b45a-80dd8e4e1e03',
+    name: 'adipisicing',
+    modDate: 'Thu May 28 1998 02:57:04 GMT+0000 (UTC)',
+    title: 'sunt id officia',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: true
+  },
+  {
+    identifier: '9c36258c-e6ed-4cf9-8c01-ffb71180e017',
+    name: 'aliqua',
+    modDate: 'Mon Feb 20 1995 20:55:19 GMT+0000 (UTC)',
+    title: 'non eu consectetur',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: 'efa87098-20c5-4337-8aa8-310205794984',
+    name: 'Lorem',
+    modDate: 'Thu Jul 31 1975 15:45:04 GMT+0000 (UTC)',
+    title: 'voluptate nulla eiusmod',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: 'd01d8fcd-e714-4613-a8af-88201613d425',
+    name: 'nisi',
+    modDate: 'Fri Jun 30 1978 21:19:18 GMT+0000 (UTC)',
+    title: 'excepteur id quis',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: '3f889e1b-e863-4c9e-8047-f629f228e3ae',
+    name: 'enim',
+    modDate: 'Sun Feb 25 2001 23:40:53 GMT+0000 (UTC)',
+    title: 'ad laborum aute',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: '6113f0b7-4c1f-4128-839b-455ef50d688c',
+    name: 'deserunt',
+    modDate: 'Wed Nov 10 1971 13:22:35 GMT+0000 (UTC)',
+    title: 'aute excepteur ullamco',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: 'dc2745b7-fbe4-44cd-aba0-41694b1c3990',
+    name: 'eu',
+    modDate: 'Wed May 31 2000 19:19:50 GMT+0000 (UTC)',
+    title: 'ad labore incididunt',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: 'e5958620-ea8a-4e12-9746-57c85963ef3f',
+    name: 'consequat',
+    modDate: 'Sun Sep 18 1994 22:02:14 GMT+0000 (UTC)',
+    title: 'aute Lorem reprehenderit',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: true
+  },
+  {
+    identifier: '6c1059a1-08ed-45d1-b2c9-e3b9fa230a99',
+    name: 'laboris',
+    modDate: 'Sun Aug 03 2008 14:18:08 GMT+0000 (UTC)',
+    title: 'amet nostrud eu',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: '856bebba-92a4-472b-9e4a-c1b61145e341',
+    name: 'officia',
+    modDate: 'Fri Jun 27 1986 16:11:56 GMT+0000 (UTC)',
+    title: 'proident tempor fugiat',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
+  },
+  {
+    identifier: 'a1a82dfc-25c2-40b7-847c-b3588389643a',
+    name: 'fugiat',
+    modDate: 'Mon Oct 12 2009 22:24:18 GMT+0000 (UTC)',
+    title: 'labore in qui',
+    path: '',
+    type: TreeAssetType.FOLDER,
+    showOnMenu: false
   }
 ];

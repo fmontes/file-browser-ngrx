@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FolderItem } from '../../models';
 
 @Component({
   selector: 'app-folder-tree',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./folder-tree.component.scss']
 })
 export class FolderTreeComponent implements OnInit {
+  @Input() data: FolderItem[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    console.log('click');
   }
 
 }

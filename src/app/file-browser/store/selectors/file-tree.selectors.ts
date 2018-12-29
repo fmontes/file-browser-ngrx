@@ -1,15 +1,14 @@
 import { createSelector } from '@ngrx/store';
 
-import * as fromRoot from '../../../_main/store';
 import * as fromFeature from '../reducers';
-import * as fromFileTree from '../reducers/file-tree.reducer';
+import * as fromTreeFile from '../reducers/tree-file.reducer';
 
-import { FileTreeItem } from '../../models/file-tree-item.model';
+import { TreeFileItem } from '../../models/tree-file-item.model';
 
 /*
   state = {
     file-browser: {
-      fileTree: {
+      treeFile: {
         ...
       }
     }
@@ -17,30 +16,30 @@ import { FileTreeItem } from '../../models/file-tree-item.model';
 */
 
 // get the state inside the feature: file-browser
-export const getFileTreeState = createSelector(
+export const getTreeFileState = createSelector(
   fromFeature.getFileBrowserState,
-  (state: fromFeature.FileBrowserState) => state.fileTree
+  (state: fromFeature.FileBrowserState) => state.treeFile
 );
 
 // get the file trees from the state
-export const getFileTreesEntities = createSelector(
-  getFileTreeState,
-  fromFileTree.getFileTreesEntities
+export const getTreeFilesEntities = createSelector(
+  getTreeFileState,
+  fromTreeFile.getTreeFilesEntities
 );
 
-export const getAllFileTrees = createSelector(
-  getFileTreesEntities,
-  (entities: {[id: string]: FileTreeItem}) => {
+export const getAllTreeFiles = createSelector(
+  getTreeFilesEntities,
+  (entities: {[id: string]: TreeFileItem}) => {
     return Object.keys(entities).map((id: string) => entities[id]);
   }
 );
 
-export const getFileTreesLoading = createSelector(
-  getFileTreeState,
-  fromFileTree.getFileTreeLoading
+export const getTreeFilesLoading = createSelector(
+  getTreeFileState,
+  fromTreeFile.getTreeFileLoading
 );
 
-export const getFileTreesLoaded = createSelector(
-  getFileTreeState,
-  fromFileTree.getFileTreeLoaded
+export const getTreeFilesLoaded = createSelector(
+  getTreeFileState,
+  fromTreeFile.getTreeFileLoaded
 );
