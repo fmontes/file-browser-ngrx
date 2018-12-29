@@ -18,7 +18,7 @@ export class FoldersEffects {
 
   @Effect()
   loadTreeFile$ = this.actions$.pipe(
-    ofType(foldersActions.LOAD_FILE_TREE),
+    ofType(foldersActions.LOAD_FOLDERS),
     switchMap(() => {
       return this.foldersService.getItems().pipe(
         map((files: FolderItem[]) => new foldersActions.LoadFoldersSuccess(files)),

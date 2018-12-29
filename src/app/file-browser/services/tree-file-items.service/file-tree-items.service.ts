@@ -7,11 +7,14 @@ import { FILES } from 'src/data/db';
   providedIn: 'root'
 })
 export class TreeFileItemsService {
-
-  constructor() { }
+  constructor() {}
 
   getItems(path: string = '/'): Observable<TreeFileItem[]> {
-    // return of(FILES.filter((files: TreeFileItem) => files.path === path));
-    return of(FILES);
+    console.log(
+      `%cAPI CALL: TreeFileItemsService.getItems with path ${path}: TreeFileItem[]`,
+      'color: blue; font-size: 1rem;'
+    );
+    return of(FILES.filter((files: TreeFileItem) => files.path === path));
+    // return of(FILES);
   }
 }

@@ -11,6 +11,8 @@ import { FolderTreeModule } from './components/folder-tree/folder-tree.module';
 import { FolderContentModule } from './components/folder-content/folder-content.module';
 
 import { reducers, effects } from './store';
+import * as fromGuards from './guards';
+
 @NgModule({
   declarations: [FileBrowserComponent],
   imports: [
@@ -20,6 +22,7 @@ import { reducers, effects } from './store';
     FileBrowserRoutingModule,
     StoreModule.forFeature('file-browser', reducers),
     EffectsModule.forFeature(effects)
-  ]
+  ],
+  providers: [fromGuards.TreeFileGuard, fromGuards.FoldersGuard]
 })
 export class FileBrowserModule { }

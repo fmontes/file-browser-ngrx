@@ -25,12 +25,12 @@ export const getAllFolders = createSelector(
   }
 );
 
-export const getFolderssLoading = createSelector(
+export const getFoldersLoading = createSelector(
   getFoldersState,
   fromFolders.getFoldersLoading
 );
 
-export const getFolderssLoaded = createSelector(
+export const getFoldersLoaded = createSelector(
   getFoldersState,
   fromFolders.getFoldersLoaded
 );
