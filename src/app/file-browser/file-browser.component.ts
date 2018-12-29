@@ -23,8 +23,7 @@ export class FileBrowserComponent implements OnInit {
   constructor(private store: Store<fromStore.FileBrowserState>) {}
 
   ngOnInit() {
-    // this.treeFiles$ = this.store.select(fromStore.getAllTreeFiles);
-    this.treeFiles$ = this.store.select(fromStore.getTreeFilesInPath);
+    this.treeFiles$ = this.store.select(fromStore.getAllTreeFiles);
     this.folders$ = this.store.select(fromStore.getAllFolders);
 
     this.folderActive$ = this.store

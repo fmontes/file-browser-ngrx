@@ -5,7 +5,6 @@ import * as fromFeature from '../reducers';
 import * as fromTreeFile from '../reducers/tree-file.reducer';
 
 import { TreeFileItem } from '../../models';
-import { RouterStateUrl } from '../../../_main/store';
 
 /*
   state = {
@@ -44,17 +43,4 @@ export const getTreeFilesLoading = createSelector(
 export const getTreeFilesLoaded = createSelector(
   getTreeFileState,
   fromTreeFile.getTreeFileLoaded
-);
-
-export const getTreeFilesInPath = createSelector(
-  getTreeFilesEntities,
-  fromRoot.getRouterState,
-  (entities, router): TreeFileItem[] => {
-    const treeFiles: TreeFileItem[] = Object.keys(entities).map((id: string) => entities[id]);
-
-    if (router.state.params.path) {
-      return treeFiles.filter((item: TreeFileItem) => item.path.slice(1) === router.state.params.path);
-    }
-    return treeFiles;
-  }
 );
