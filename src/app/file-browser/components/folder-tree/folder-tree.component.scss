@@ -1,3 +1,9 @@
-.active .mat-line {
-  font-weight: bold;
+@import "md-theme";
+
+.active {
+  mat-icon,
+  .mat-line {
+    color: mat-color($accent);
+  }
 }
+

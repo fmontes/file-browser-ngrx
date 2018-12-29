@@ -25,10 +25,7 @@ export class FileBrowserComponent implements OnInit {
   ngOnInit() {
     this.treeFiles$ = this.store.select(fromStore.getAllTreeFiles);
     this.folders$ = this.store.select(fromStore.getAllFolders);
-
-    this.folderActive$ = this.store
-      .select(fromRoot.getRouterState)
-      .pipe(map((routerState: RouterReducerState<fromRoot.RouterStateUrl>) => routerState.state.params.path));
+    this.folderActive$ = this.store.select(fromRoot.getRouterPath);
   }
 
   onSelectedFolder(event: FolderItem): void {

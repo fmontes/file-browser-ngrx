@@ -1,2 +1,6 @@
-<app-folder-tree [active]="folderActive$ | async" [data]="folders$ | async" (selected)="onSelectedFolder($event)"></app-folder-tree>
+<app-folder-tree
+  [active]="folderActive$ | async"
+  [data]="folders$ | async"
+  (selected)="onSelectedFolder($event)"
+></app-folder-tree>
 <app-folder-content [data]="treeFiles$ | async"></app-folder-content>
