@@ -314,7 +314,7 @@ export const FOLDERS: FolderItem[] = [
     name: 'Nisi',
     modDate: 'Fri Jun 30 1978 21:19:18 GMT+0000 (UTC)',
     title: 'excepteur id quis',
-    path: '',
+    path: '/nisi',
     type: TreeAssetType.FOLDER,
     showOnMenu: false
   }

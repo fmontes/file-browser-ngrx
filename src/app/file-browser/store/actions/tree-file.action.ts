@@ -5,10 +5,13 @@ import { TreeFileItem } from '../../models';
 export const LOAD_FILE_TREE = '[File Browser] Load File Tree';
 export const LOAD_FILE_TREE_FAIL = '[File Browser] Load File Tree Fail';
 export const LOAD_FILE_TREE_SUCCESS = '[File Browser] Load File Tree Success';
+export const CLEAR_FILE_TREE = '[File Browser] Clear File Tree';
 
 // define action creator
 export class LoadTreeFile implements Action {
   readonly type = LOAD_FILE_TREE;
+
+  constructor(public payload?: any) {}
 }
 
 export class LoadTreeFileFail implements Action {
@@ -23,5 +26,12 @@ export class LoadTreeFileSuccess implements Action {
   constructor(public payload: TreeFileItem[]) {}
 }
 
+export class ClearTreeFile implements Action {
+  readonly type = CLEAR_FILE_TREE;
+
+  constructor() {}
+}
+
+
 // all the actions that TreeFile could have
-export type TreeFileAction = LoadTreeFile | LoadTreeFileFail | LoadTreeFileSuccess;
+export type TreeFileAction = LoadTreeFile | LoadTreeFileFail | LoadTreeFileSuccess | ClearTreeFile;

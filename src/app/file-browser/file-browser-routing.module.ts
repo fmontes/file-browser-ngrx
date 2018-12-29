@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: ':path',
     component: FileBrowserComponent,
-    canActivate: [fromGuards.TreeFileGuard]
+    canActivate: [fromGuards.FoldersGuard, fromGuards.TreeFileGuard]
   }
 ];
 

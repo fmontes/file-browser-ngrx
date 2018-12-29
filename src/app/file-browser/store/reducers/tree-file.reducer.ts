@@ -53,6 +53,10 @@ export function reducer(state = initialState, action: fromTreeFile.TreeFileActio
         loaded: false
       };
     }
+
+    case fromTreeFile.CLEAR_FILE_TREE: {
+      return initialState;
+    }
   }
 
   return state;

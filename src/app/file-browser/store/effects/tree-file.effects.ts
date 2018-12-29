@@ -19,8 +19,8 @@ export class TreeFileEffects {
   @Effect()
   loadTreeFile$ = this.actions$.pipe(
     ofType(treeFileActions.LOAD_FILE_TREE),
-    switchMap(() => {
-      return this.treeFileItemService.getItems().pipe(
+    switchMap((action: treeFileActions.LoadTreeFile) => {
+      return this.treeFileItemService.getItems(`/${action.payload || ''}`).pipe(
         map((files: TreeFileItem[]) => new treeFileActions.LoadTreeFileSuccess(files)),
         catchError(error => of(new treeFileActions.LoadTreeFileFail(error)))
       );

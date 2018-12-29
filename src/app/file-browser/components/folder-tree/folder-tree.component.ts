@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FolderItem } from '../../models';
 
 @Component({
@@ -8,6 +8,8 @@ import { FolderItem } from '../../models';
 })
 export class FolderTreeComponent implements OnInit {
   @Input() data: FolderItem[];
+  @Input() active: string;
+  @Output() selected: EventEmitter<FolderItem> = new EventEmitter();
 
   constructor() { }
 
