@@ -92,6 +92,11 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/scss"
+              ]
+            },
             "scripts": [],
             "assets": [
               "src/favicon.ico",
