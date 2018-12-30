@@ -7,8 +7,6 @@ import * as fromRoot from '../_main/store';
 import * as fromStore from './store';
 import { TreeFileItem } from './models/tree-file-item.model';
 import { FolderItem } from './models';
-import { RouterReducerState } from '@ngrx/router-store';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-file-browser',

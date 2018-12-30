@@ -66,7 +66,7 @@ describe('TreeFileReducer', () => {
   });
 });
 
-fdescribe('TreeFileReducer Selectors', () => {
+describe('TreeFileReducer Selectors', () => {
   describe('getTreeFilesEntities', () => {
     it('should return .entities', () => {
       const { initialState } = fromTreeFile;
