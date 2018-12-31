@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+
 import { FolderTreeComponent } from './folder-tree.component';
 
 describe('FolderTreeComponent', () => {
@@ -8,9 +11,9 @@ describe('FolderTreeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FolderTreeComponent ]
-    })
-    .compileComponents();
+      declarations: [FolderTreeComponent],
+      imports: [MatListModule, MatIconModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

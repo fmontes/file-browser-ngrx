@@ -37,7 +37,7 @@ const entities = {
   [files[1].identifier]: files[1]
 };
 
-fdescribe('TreeFile Selectors', () => {
+describe('TreeFile Selectors', () => {
   let store: Store<fromReducers.FileBrowserState>;
 
   beforeEach(() => {

@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatTableModule } from '@angular/material/table';
+
 import { FolderContentComponent } from './folder-content.component';
 
 describe('FolderContentComponent', () => {
@@ -8,9 +10,9 @@ describe('FolderContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FolderContentComponent ]
-    })
-    .compileComponents();
+      declarations: [FolderContentComponent],
+      imports: [MatTableModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
