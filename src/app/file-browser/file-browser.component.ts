@@ -14,15 +14,17 @@ import { TreeItem } from './models';
   styleUrls: ['./file-browser.component.scss']
 })
 export class FileBrowserComponent implements OnInit {
-  treeFiles$: Observable<TreeItem[]>;
+  treeItems$: Observable<TreeItem[]>;
   folders$: Observable<TreeItem[]>;
   folderActive$: Observable<string>;
+  viewGrid$: Observable<boolean>;
 
   constructor(private store: Store<fromStore.FileBrowserState>) {}
 
   ngOnInit() {
-    this.treeFiles$ = this.store.select(fromStore.getAllTreeItems);
+    this.treeItems$ = this.store.select(fromStore.getAllTreeItems);
     this.folders$ = this.store.select(fromStore.getAllFolders);
+    this.viewGrid$ = this.store.select(fromStore.getTreeItemsViewGrid);
     this.folderActive$ = this.store.select(fromRoot.getRouterPath);
   }
 
@@ -31,6 +33,12 @@ export class FileBrowserComponent implements OnInit {
       new fromRoot.Go({
         path: ['file-browser', event.name]
       })
+    );
+  }
+
+  onSelectView(event: string): void {
+    this.store.dispatch(
+      new fromStore.ToggleViewTreeItems()
     );
   }
 }

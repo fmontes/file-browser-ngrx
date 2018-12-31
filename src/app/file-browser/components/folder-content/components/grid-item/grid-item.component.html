@@ -1,0 +1,14 @@
+<mat-card>
+  <div *ngIf="isImage; else icon" mat-card-image [ngStyle]="{'background-image': 'url(' + item.url + ')'}">
+  </div>
+  <ng-template #icon>
+    <div class="icon">
+      <mat-icon>{{ item.type === 'file' ? 'insert_drive_file' : 'folder_open' }}</mat-icon>
+    </div>
+  </ng-template>
+  <mat-card-content>
+      <h3>{{ item.title }}</h3>
+      <time>{{ item.modDate | date }}</time>
+  </mat-card-content>
+</mat-card>
+

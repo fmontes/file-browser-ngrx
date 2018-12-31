@@ -3,4 +3,17 @@
   [data]="folders$ | async"
   (selected)="onSelectedFolder($event)"
 ></app-folder-tree>
-<app-folder-content [data]="treeFiles$ | async"></app-folder-content>
+<main>
+  <mat-toolbar>
+    <mat-form-field style="width: 30%"> <input matInput value="Search coming soon" disabled="true" /> </mat-form-field>
+
+    <div class="spacer"></div>
+
+    <app-view-mode-selector
+      value="list"
+      (selected)="onSelectView($event)">
+    </app-view-mode-selector>
+  </mat-toolbar>
+
+  <app-folder-content [class.grid]="viewGrid$ | async" [data]="treeItems$ | async" [grid]="viewGrid$ | async"></app-folder-content>
+</main>

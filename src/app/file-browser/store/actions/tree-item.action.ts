@@ -5,7 +5,8 @@ export enum TreeItemActionTypes {
   LOAD_TREE_ITEMS = '[FileBrowser] Load TreeItems',
   LOAD_TREE_ITEMS_SUCCESS = '[FileBrowser] Load TreeItems Success',
   LOAD_TREE_ITEMS_FAIL = '[FileBrowser] Load TreeItems Fail',
-  CLEAR_TREE_ITEMS = '[FileBrowser] Clear TreeItems'
+  CLEAR_TREE_ITEMS = '[FileBrowser] Clear TreeItems',
+  TOGGLE_VIEW_TREE_ITEMS = '[FileBrowser] Toggle View TreeItems'
 }
 
 export class LoadTreeItems implements Action {
@@ -32,9 +33,15 @@ export class ClearTreeItems implements Action {
   constructor() {}
 }
 
+export class ToggleViewTreeItems implements Action {
+  readonly type = TreeItemActionTypes.TOGGLE_VIEW_TREE_ITEMS;
+
+  constructor() {}
+}
 
 export type TreeItemActions =
   | LoadTreeItems
   | LoadTreeItemsSuccess
   | LoadTreeItemsFail
-  | ClearTreeItems;
+  | ClearTreeItems
+  | ToggleViewTreeItems;

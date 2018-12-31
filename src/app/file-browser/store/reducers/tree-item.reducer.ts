@@ -5,6 +5,7 @@ import { TreeItemActions, TreeItemActionTypes } from '../actions/tree-item.actio
 export interface TreeItemState extends EntityState<TreeItem> {
   loading: boolean;
   loaded: boolean;
+  viewGrid: boolean;
 }
 
 export const adapter: EntityAdapter<TreeItem> = createEntityAdapter<TreeItem>({
@@ -16,7 +17,8 @@ export const adapter: EntityAdapter<TreeItem> = createEntityAdapter<TreeItem>({
 
 export const initialState: TreeItemState = adapter.getInitialState({
   loading: false,
-  loaded: false
+  loaded: false,
+  viewGrid: false
 });
 
 export function reducer(state = initialState, action: TreeItemActions): TreeItemState {
@@ -45,7 +47,17 @@ export function reducer(state = initialState, action: TreeItemActions): TreeItem
     }
 
     case TreeItemActionTypes.CLEAR_TREE_ITEMS: {
-      return initialState;
+      return {
+        ...initialState,
+        viewGrid: state.viewGrid
+      };
+    }
+
+    case TreeItemActionTypes.TOGGLE_VIEW_TREE_ITEMS: {
+      return {
+        ...state,
+        viewGrid: !state.viewGrid
+      };
     }
 
     default: {
@@ -59,3 +71,4 @@ export const { selectIds, selectEntities, selectAll, selectTotal } = adapter.get
 export const getTreeItemsLoaded = (state: TreeItemState) => state.loaded;
 export const getTreeItemsLoading = (state: TreeItemState) => state.loading;
 export const getTreeItemsEntities = (state: TreeItemState) => state.entities;
+export const getTreeItemsViewGrid = (state: TreeItemState) => state.viewGrid;

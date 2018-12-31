@@ -1,31 +1,5 @@
-<table mat-table [dataSource]="data">
-  <ng-container matColumnDef="icon">
-    <th mat-header-cell *matHeaderCellDef>Title</th>
-    <td mat-cell *matCellDef="let element" style="width: 32px">
-        <app-list-icon [type]="element.type"></app-list-icon>
-    </td>
-  </ng-container>
+<app-grid-view [data]="data" *ngIf="grid; else list"></app-grid-view>
 
-  <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let element">{{ element.title }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="modDate">
-    <th mat-header-cell *matHeaderCellDef>Date</th>
-    <td mat-cell *matCellDef="let element">{{ element.modDate | date }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="path">
-    <th mat-header-cell *matHeaderCellDef>Path</th>
-    <td mat-cell *matCellDef="let element">{{ element.path }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="fileSize">
-    <th mat-header-cell *matHeaderCellDef>Size</th>
-    <td mat-cell *matCellDef="let element">{{ element.fileSize }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+<ng-template #list>
+  <app-list-view [data]="data"></app-list-view>
+</ng-template>

@@ -19,5 +19,10 @@ export const getTreeItemsLoaded = createSelector(
   fromTreeItem.getTreeItemsLoaded
 );
 
+export const getTreeItemsViewGrid = createSelector(
+  getTreeItemState,
+  fromTreeItem.getTreeItemsViewGrid
+);
+
 
 

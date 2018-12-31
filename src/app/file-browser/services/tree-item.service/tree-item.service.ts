@@ -14,6 +14,11 @@ export class TreeItemService {
       `%cAPI CALL: TreeItemService.getTreeItems with path ${path}: TreeItem[]`,
       'color: blue; font-size: 1rem;'
     );
-    return of(ITEMS.filter((file: TreeItem) => file.path === path));
+    return of(ITEMS.filter((file: TreeItem) => {
+      if (path === '/') {
+        return file.type !== TreeItemType.FOLDER && file.path === path;
+      }
+      return file.path === path;
+    }));
   }
 }

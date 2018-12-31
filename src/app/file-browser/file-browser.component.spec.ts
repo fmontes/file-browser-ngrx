@@ -6,7 +6,11 @@ import { FolderTreeModule } from './components/folder-tree/folder-tree.module';
 import { TestStore } from '../testing/test-store';
 
 import { Store } from '@ngrx/store';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ViewModeSelectorModule } from './components/view-mode-selector/view-mode-selector.module';
 
 describe('FileBrowserComponent', () => {
   let component: FileBrowserComponent;
@@ -15,7 +19,14 @@ describe('FileBrowserComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FileBrowserComponent],
-      imports: [FolderContentModule, FolderTreeModule],
+      imports: [
+        BrowserAnimationsModule,
+        FolderContentModule,
+        FolderTreeModule,
+        MatInputModule,
+        MatToolbarModule,
+        ViewModeSelectorModule
+      ],
       providers: [
         {
           provide: Store,

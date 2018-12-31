@@ -1,9 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatTableModule } from '@angular/material/table';
-
 import { FolderContentComponent } from './folder-content.component';
-import { ListIconModule } from './components/list-icon/list-icon.module';
+import { GridViewModule } from './components/grid-view/grid-view.module';
+import { ListViewModule } from './components/list-view/list-view.module';
 
 describe('FolderContentComponent', () => {
   let component: FolderContentComponent;
@@ -12,7 +11,7 @@ describe('FolderContentComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FolderContentComponent],
-      imports: [MatTableModule, ListIconModule]
+      imports: [GridViewModule, ListViewModule]
     }).compileComponents();
   }));
 

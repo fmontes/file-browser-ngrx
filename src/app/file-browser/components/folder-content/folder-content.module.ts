@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 
 import { FolderContentComponent } from './folder-content.component';
-import { ListIconModule } from './components/list-icon/list-icon.module';
+import { ListViewModule } from './components/list-view/list-view.module';
+import { GridViewModule } from './components/grid-view/grid-view.module';
 
 @NgModule({
   declarations: [FolderContentComponent],
   imports: [
     CommonModule,
-    MatTableModule,
-    ListIconModule
+    ListViewModule,
+    GridViewModule
   ],
   exports: [FolderContentComponent]
 })

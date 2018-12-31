@@ -2,13 +2,33 @@ import { TreeItem, TreeItemType } from 'src/app/file-browser/models';
 
 export const ITEMS: TreeItem[] = [
   {
+    identifier: '0f8e77e0-19ca-4ca2-b840-4e9e567852ba',
+    name: 'root1',
+    extension: 'pdf',
+    modDate: 'Thu Apr 13 1995 20:22:48 GMT+0000 (UTC)',
+    title: 'This is a root file',
+    fileSize: 1616,
+    path: '/',
+    type: TreeItemType.FILE
+  },
+  {
+    identifier: '94f19bcf-87ce-4e22-97c6-7f14029662bd',
+    name: 'root2',
+    extension: 'pdf',
+    modDate: 'Thu May 13 2005 20:22:48 GMT+0000 (UTC)',
+    title: 'Another root file',
+    fileSize: 2999,
+    path: '/',
+    type: TreeItemType.FILE
+  },
+  {
     identifier: '0f38f1b6-f851-40ea-92db-18c41e3d9490',
     name: 'ullamco',
     extension: 'html',
     modDate: 'Thu May 17 1990 01:20:42 GMT+0000 (UTC)',
     title: 'labore nisi pariatur',
     fileSize: 3638,
-    path: '/',
+    path: '/lorem',
     type: TreeItemType.FILE
   },
   {
@@ -18,7 +38,8 @@ export const ITEMS: TreeItem[] = [
     modDate: 'Fri Jun 04 2004 00:59:49 GMT+0000 (UTC)',
     title: 'do tempor id',
     fileSize: 2214,
-    path: '/',
+    path: '/nisi',
+    url: '//images.unsplash.com/photo-1546170711-7081b65b968a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=550&q=80',
     type: TreeItemType.FILE
   },
   {
@@ -28,7 +49,8 @@ export const ITEMS: TreeItem[] = [
     modDate: 'Fri Feb 17 1989 02:52:49 GMT+0000 (UTC)',
     title: 'occaecat dolor eiusmod',
     fileSize: 3905,
-    path: '/',
+    path: '/lorem',
+    url: '//images.unsplash.com/photo-1521633286323-05b17f47cb74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=550&q=80',
     type: TreeItemType.FILE
   },
   {
@@ -38,11 +60,22 @@ export const ITEMS: TreeItem[] = [
     modDate: 'Sun Sep 25 1977 07:49:40 GMT+0000 (UTC)',
     title: 'eu minim ex',
     fileSize: 3296,
-    path: '/',
+    path: '/nisi',
     type: TreeItemType.FILE
   },
   {
     identifier: 'e3e9acda-951c-4e55-80eb-f65b83852aab',
+    name: 'afile',
+    extension: 'jpg',
+    modDate: 'Thu Apr 13 1995 20:22:48 GMT+0000 (UTC)',
+    title: 'This is an image',
+    fileSize: 1616,
+    path: '/magna',
+    url: '//images.unsplash.com/photo-1546168039-934e147af371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=550&q=80',
+    type: TreeItemType.FILE
+  },
+  {
+    identifier: 'aafe654d-7929-4db6-8786-1565bf7d3632',
     name: 'ex',
     extension: 'pdf',
     modDate: 'Thu Apr 13 1995 20:22:48 GMT+0000 (UTC)',
