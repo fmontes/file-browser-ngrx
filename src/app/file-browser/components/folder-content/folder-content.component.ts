@@ -10,7 +10,7 @@ import { TreeItem } from '../../models';
 export class FolderContentComponent implements OnInit {
   @Input() data: TreeItem[];
 
-  displayedColumns: string[] = ['title', 'modDate', 'path', 'fileSize'];
+  displayedColumns: string[] = ['icon', 'title', 'modDate', 'path', 'fileSize'];
 
   constructor() {}
 

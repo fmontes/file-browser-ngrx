@@ -1,5 +1,5 @@
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
-import { TreeItem } from '../../models/tree-item.model';
+import { TreeItem, TreeItemType } from '../../models/tree-item.model';
 import { TreeItemActions, TreeItemActionTypes } from '../actions/tree-item.action';
 
 export interface TreeItemState extends EntityState<TreeItem> {
@@ -7,21 +7,19 @@ export interface TreeItemState extends EntityState<TreeItem> {
   loaded: boolean;
 }
 
-export const adapter: EntityAdapter<TreeItem> = createEntityAdapter<TreeItem>(
-  {
-    selectId: (item: TreeItem) => item.identifier
+export const adapter: EntityAdapter<TreeItem> = createEntityAdapter<TreeItem>({
+  selectId: (item: TreeItem) => item.identifier,
+  sortComparer: (e1: TreeItem, e2: TreeItem) => {
+    return e1.type === TreeItemType.FOLDER ? -1 : 1; // Folders first
   }
-);
+});
 
 export const initialState: TreeItemState = adapter.getInitialState({
   loading: false,
   loaded: false
 });
 
-export function reducer(
-  state = initialState,
-  action: TreeItemActions
-): TreeItemState {
+export function reducer(state = initialState, action: TreeItemActions): TreeItemState {
   switch (action.type) {
     case TreeItemActionTypes.LOAD_TREE_ITEMS: {
       return {
@@ -56,12 +54,7 @@ export function reducer(
   }
 }
 
-export const {
-  selectIds,
-  selectEntities,
-  selectAll,
-  selectTotal,
-} = adapter.getSelectors();
+export const { selectIds, selectEntities, selectAll, selectTotal } = adapter.getSelectors();
 
 export const getTreeItemsLoaded = (state: TreeItemState) => state.loaded;
 export const getTreeItemsLoading = (state: TreeItemState) => state.loading;

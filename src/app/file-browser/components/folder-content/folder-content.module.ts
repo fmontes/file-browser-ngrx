@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 
 import { FolderContentComponent } from './folder-content.component';
+import { ListIconModule } from './components/list-icon/list-icon.module';
 
 @NgModule({
   declarations: [FolderContentComponent],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    ListIconModule
   ],
   exports: [FolderContentComponent]
 })

@@ -14,22 +14,6 @@ export class TreeItemService {
       `%cAPI CALL: TreeItemService.getTreeItems with path ${path}: TreeItem[]`,
       'color: blue; font-size: 1rem;'
     );
-    return of(this.getFiles(ITEMS).filter((file: TreeItem) => file.path === path));
-  }
-
-  getRooFolders(): Observable<TreeItem[]> {
-    console.log(
-      `%cAPI CALL: TreeItemService.getRooFolders: TreeItem[]`,
-      'color: green; font-size: 1rem;'
-    );
-    return of(this.getFolders(ITEMS).filter((file: TreeItem) => file.path === '/'));
-  }
-
-  private getFiles(items: TreeItem[]): TreeItem[] {
-    return items.filter((item: TreeItem) => item.type === TreeItemType.FILE);
-  }
-
-  private getFolders(items: TreeItem[]): TreeItem[] {
-    return items.filter((item: TreeItem) => item.type === TreeItemType.FOLDER);
+    return of(ITEMS.filter((file: TreeItem) => file.path === path));
   }
 }

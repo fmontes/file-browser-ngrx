@@ -158,7 +158,7 @@ export const ITEMS: TreeItem[] = [
     modDate: 'Sat Sep 12 2009 04:42:00 GMT+0000 (UTC)',
     title: 'velit magna elit',
     fileSize: 3666,
-    path: '',
+    path: '/nisi',
     type: TreeItemType.FILE
   },
   {
@@ -174,12 +174,11 @@ export const ITEMS: TreeItem[] = [
   {
     identifier: '4580fe7c-1c9e-4337-9d47-afeef2571fd6',
     name: 'amet',
-    extension: 'docx',
     modDate: 'Sun Jul 15 1979 14:06:38 GMT+0000 (UTC)',
     title: 'laborum sunt qui',
     fileSize: 2436,
-    path: '',
-    type: TreeItemType.FILE
+    path: '/nisi',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: 'fb5e21ea-0b20-446c-af7d-27a8a70deab8',

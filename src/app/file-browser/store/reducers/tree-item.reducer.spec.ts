@@ -1,6 +1,6 @@
 import * as fromTreeFile from './tree-item.reducer';
 import * as fromActions from '../actions/tree-item.action';
-import { TreeItem, TreeItemType } from '../../models';
+import { TreeItem } from '../../models';
 import { ITEMS } from 'src/data/db';
 
 const files: TreeItem[] = [{...ITEMS[0]}, {...ITEMS[1]}];
