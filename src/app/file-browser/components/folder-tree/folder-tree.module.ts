@@ -4,8 +4,6 @@ import { FolderTreeComponent } from './folder-tree.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
-
-
 @NgModule({
   declarations: [FolderTreeComponent],
   imports: [

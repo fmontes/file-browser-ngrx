@@ -1,16 +1,16 @@
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
 
-import * as fromTreeFile from './tree-file.reducer';
 import * as fromFolders from './folders.reducer';
+import * as fromTreeItem from './tree-item.reducer';
 
 export interface FileBrowserState {
-  files: fromTreeFile.TreeFileItemState;
   folders: fromFolders.FolderItemState;
+  items: fromTreeItem.TreeItemState;
 }
 
 export const reducers: ActionReducerMap<FileBrowserState> = {
-  files: fromTreeFile.reducer,
-  folders: fromFolders.reducer
+  folders: fromFolders.reducer,
+  items: fromTreeItem.reducer,
 };
 
 // create base level of state object: 'file-browser'

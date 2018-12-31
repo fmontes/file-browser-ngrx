@@ -1,2 +1,2 @@
-export * from './tree-file.guard';
+export * from './tree-item.guard';
 export * from './folders.guard';

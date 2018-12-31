@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { TreeFileItem } from '../../models/tree-file-item.model';
+import { TreeItem } from '../../models';
 
 @Component({
   selector: 'app-folder-content',
@@ -8,7 +8,7 @@ import { TreeFileItem } from '../../models/tree-file-item.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FolderContentComponent implements OnInit {
-  @Input() data: TreeFileItem[];
+  @Input() data: TreeItem[];
 
   displayedColumns: string[] = ['title', 'modDate', 'path', 'fileSize'];
 

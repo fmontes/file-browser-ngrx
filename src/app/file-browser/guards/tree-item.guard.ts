@@ -9,11 +9,11 @@ import { Store } from '@ngrx/store';
 import * as fromStore from '../store';
 
 @Injectable()
-export class TreeFileGuard implements CanActivate {
+export class TreeItemGuard implements CanActivate {
   constructor(private store: Store<fromStore.FileBrowserState>) {}
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
-    this.store.dispatch(new fromStore.ClearTreeFile());
+    this.store.dispatch(new fromStore.ClearTreeItems());
 
     return this.checkStore(route.params.path || null).pipe(
       switchMap(() => of(true)),
@@ -22,10 +22,10 @@ export class TreeFileGuard implements CanActivate {
   }
 
   checkStore(folder: string): Observable<boolean> {
-    return this.store.select(fromStore.getTreeFilesLoaded).pipe(
+    return this.store.select(fromStore.getTreeItemsLoaded).pipe(
       tap(loaded => {
         if (!loaded) {
-          this.store.dispatch(new fromStore.LoadTreeFile(folder));
+          this.store.dispatch(new fromStore.LoadTreeItems(folder));
         }
       }),
       filter(loaded => loaded),

@@ -1,52 +1,43 @@
-import * as fromFolders from '../actions/folders.action';
-import { FolderItem } from '../../models';
+import { TreeItem } from '../../models';
+import { EntityState, createEntityAdapter, EntityAdapter } from '@ngrx/entity';
+import { FolderActionTypes, FoldersAction } from '../actions';
 
 // Represent a section of the full state
-export interface FolderItemState {
-  entities: { [id: string]: FolderItem };
-  loaded: boolean;
+
+export interface FolderItemState extends EntityState<TreeItem> {
   loading: boolean;
+  loaded: boolean;
 }
 
-export const initialState: FolderItemState = {
-  entities: {},
-  loaded: false,
-  loading: false
-};
+export const adapter: EntityAdapter<TreeItem> = createEntityAdapter<TreeItem>(
+  {
+    selectId: (item: TreeItem) => item.identifier
+  }
+);
 
-export function reducer(state = initialState, action: fromFolders.FoldersAction): FolderItemState {
+export const initialState: FolderItemState = adapter.getInitialState({
+  loading: false,
+  loaded: false
+});
+
+export function reducer(state = initialState, action: FoldersAction): FolderItemState {
   switch (action.type) {
-    case fromFolders.LOAD_FOLDERS: {
+    case FolderActionTypes.LOAD_FOLDERS: {
       return {
         ...state,
         loading: true
       };
     }
 
-    case fromFolders.LOAD_FOLDERS_SUCCESS: {
-      const treeFileItems = action.payload;
-
-      const entities = treeFileItems.reduce(
-        (items: { [id: string]: FolderItem }, treeFileItem: FolderItem) => {
-          return {
-            ...items,
-            [treeFileItem.identifier]: treeFileItem
-          };
-        },
-        {
-          ...state.entities
-        }
-      );
-
-      return {
+    case FolderActionTypes.LOAD_FOLDERS_SUCCESS: {
+      return adapter.addMany(action.payload, {
         ...state,
-        loading: false,
         loaded: true,
-        entities
-      };
+        loading: false
+      });
     }
 
-    case fromFolders.LOAD_FOLDERS_FAIL: {
+    case FolderActionTypes.LOAD_FOLDERS_FAIL: {
       return {
         ...state,
         loading: false,
@@ -59,6 +50,12 @@ export function reducer(state = initialState, action: fromFolders.FoldersAction)
 }
 
 // selector functions
+export const {
+  selectIds,
+  selectEntities,
+  selectAll,
+  selectTotal,
+} = adapter.getSelectors();
+
 export const getFoldersLoading = (state: FolderItemState) => state.loading;
 export const getFoldersLoaded = (state: FolderItemState) => state.loaded;
-export const getFoldersEntities = (state: FolderItemState) => state.entities;

@@ -21,8 +21,8 @@ import * as fromGuards from './guards';
     FolderContentModule,
     FileBrowserRoutingModule,
     StoreModule.forFeature('file-browser', reducers),
-    EffectsModule.forFeature(effects)
+    EffectsModule.forFeature(effects),
   ],
-  providers: [fromGuards.TreeFileGuard, fromGuards.FoldersGuard]
+  providers: [fromGuards.TreeItemGuard, fromGuards.FoldersGuard]
 })
 export class FileBrowserModule { }

@@ -1,10 +1,10 @@
 <mat-action-list>
   <a mat-list-item
     *ngFor="let folder of data"
-    [class.active]="folder.path.slice(1) === active"
+    [class.active]="folder.name === active"
     (click)="selected.emit(folder)"
   >
     <mat-icon mat-list-icon>folder</mat-icon>
-    <h4 mat-line>{{folder.name}}</h4>
+    <h4 mat-line>{{folder.title}}</h4>
   </a>
 </mat-action-list>

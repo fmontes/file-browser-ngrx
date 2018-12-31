@@ -1,6 +1,6 @@
-import { TreeAssetType, TreeFileItem, FolderItem } from 'src/app/file-browser/models';
+import { TreeItem, TreeItemType } from 'src/app/file-browser/models';
 
-export const FILES: TreeFileItem[] = [
+export const ITEMS: TreeItem[] = [
   {
     identifier: '0f38f1b6-f851-40ea-92db-18c41e3d9490',
     name: 'ullamco',
@@ -9,7 +9,7 @@ export const FILES: TreeFileItem[] = [
     title: 'labore nisi pariatur',
     fileSize: 3638,
     path: '/',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '6fddef84-b9cb-4ce6-a12b-272490e124bb',
@@ -19,7 +19,7 @@ export const FILES: TreeFileItem[] = [
     title: 'do tempor id',
     fileSize: 2214,
     path: '/',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: '9fd17b26-ef16-4677-8a86-9827befe21ab',
@@ -29,7 +29,7 @@ export const FILES: TreeFileItem[] = [
     title: 'occaecat dolor eiusmod',
     fileSize: 3905,
     path: '/',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: '80460ffb-57ac-4196-9058-15fa865be16b',
@@ -39,7 +39,7 @@ export const FILES: TreeFileItem[] = [
     title: 'eu minim ex',
     fileSize: 3296,
     path: '/',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'e3e9acda-951c-4e55-80eb-f65b83852aab',
@@ -49,7 +49,7 @@ export const FILES: TreeFileItem[] = [
     title: 'This is file inside magna folder',
     fileSize: 1616,
     path: '/magna',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'bd248af9-1260-4e2d-b2f2-966f35718a9c',
@@ -59,7 +59,7 @@ export const FILES: TreeFileItem[] = [
     title: 'This is a file inside culpa folder',
     fileSize: 1789,
     path: '/culpa',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'd0217189-beaa-4013-8b12-d611e58fc320',
@@ -69,7 +69,7 @@ export const FILES: TreeFileItem[] = [
     title: 'This file is inside adipisicing',
     fileSize: 1211,
     path: '/adipisicing',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: '72450ba3-2184-4801-b207-6a34f49c7124',
@@ -79,7 +79,7 @@ export const FILES: TreeFileItem[] = [
     title: 'File in aliqua folder',
     fileSize: 3489,
     path: 'aliqua',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: '938bd915-c463-4f47-b3f6-f3d23604a627',
@@ -89,7 +89,7 @@ export const FILES: TreeFileItem[] = [
     title: 'A lorem file',
     fileSize: 3726,
     path: '/lorem',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'e28f5a84-64db-4ad6-b321-f4c897869f5f',
@@ -99,7 +99,7 @@ export const FILES: TreeFileItem[] = [
     title: 'Im inside nisi',
     fileSize: 2131,
     path: '/nisi',
-    type: TreeAssetType.FOLDER,
+    type: TreeItemType.FILE
   },
   {
     identifier: '8022fc46-8548-4615-97ef-615d339a062f',
@@ -109,7 +109,7 @@ export const FILES: TreeFileItem[] = [
     title: 'Im inside magna',
     fileSize: 3875,
     path: '/magna',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'a956c83b-5f3b-4e09-bf76-ca184d5f1000',
@@ -119,7 +119,7 @@ export const FILES: TreeFileItem[] = [
     title: 'An adipisicing file',
     fileSize: 1409,
     path: 'adipisicing',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'e9c08473-3bf7-4593-80f0-bc0dbe3a3866',
@@ -129,7 +129,7 @@ export const FILES: TreeFileItem[] = [
     title: 'I live in aliqua',
     fileSize: 3461,
     path: '/aliqua',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '66c40bed-4362-49dd-bde0-2b9a996787a2',
@@ -139,7 +139,7 @@ export const FILES: TreeFileItem[] = [
     title: 'Hey Im with lorem',
     fileSize: 2850,
     path: '/lorem',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '7cd02f67-1114-4b25-93b7-74020b905294',
@@ -149,7 +149,7 @@ export const FILES: TreeFileItem[] = [
     title: 'Nisi party',
     fileSize: 3533,
     path: '/nisi',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '7af961a1-914b-4882-bf3b-3724c7bc388a',
@@ -159,7 +159,7 @@ export const FILES: TreeFileItem[] = [
     title: 'velit magna elit',
     fileSize: 3666,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '90816ed3-922a-418d-ac04-a521c9d459b8',
@@ -169,7 +169,7 @@ export const FILES: TreeFileItem[] = [
     title: 'dolore nisi nulla',
     fileSize: 2485,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '4580fe7c-1c9e-4337-9d47-afeef2571fd6',
@@ -179,7 +179,7 @@ export const FILES: TreeFileItem[] = [
     title: 'laborum sunt qui',
     fileSize: 2436,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'fb5e21ea-0b20-446c-af7d-27a8a70deab8',
@@ -189,7 +189,7 @@ export const FILES: TreeFileItem[] = [
     title: 'ea reprehenderit deserunt',
     fileSize: 3907,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '9e3cdb72-3380-4d09-a244-087042a13461',
@@ -199,7 +199,7 @@ export const FILES: TreeFileItem[] = [
     title: 'magna exercitation exercitation',
     fileSize: 3032,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'b90dc524-1949-482b-a139-bc627e751499',
@@ -209,7 +209,7 @@ export const FILES: TreeFileItem[] = [
     title: 'laboris anim minim',
     fileSize: 2838,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'aea584cf-35d7-4f99-9d69-ef676b2a9b7e',
@@ -219,7 +219,7 @@ export const FILES: TreeFileItem[] = [
     title: 'nostrud consectetur exercitation',
     fileSize: 2931,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'f7d3433a-1a08-427e-a8b5-abac1d967390',
@@ -229,7 +229,7 @@ export const FILES: TreeFileItem[] = [
     title: 'consequat eu irure',
     fileSize: 1027,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: 'ffb58352-9bc2-4b4f-8d7c-c1aaf23dabf1',
@@ -239,7 +239,7 @@ export const FILES: TreeFileItem[] = [
     title: 'sit voluptate deserunt',
     fileSize: 1581,
     path: '',
-    type: TreeAssetType.FILE
+    type: TreeItemType.FILE
   },
   {
     identifier: '7b89dcf4-b2ed-487f-aa5a-0d33fd371adf',
@@ -249,7 +249,7 @@ export const FILES: TreeFileItem[] = [
     title: 'consequat aute esse',
     fileSize: 2325,
     path: '',
-    type: TreeAssetType.FILE,
+    type: TreeItemType.FILE
   },
   {
     identifier: 'd0456361-5066-4765-86b4-e93e91755390',
@@ -259,63 +259,54 @@ export const FILES: TreeFileItem[] = [
     title: 'aliqua cillum mollit',
     fileSize: 1452,
     path: '',
-    type: TreeAssetType.FILE,
-  }
-];
-
-export const FOLDERS: FolderItem[] = [
+    type: TreeItemType.FILE
+  },
   {
     identifier: '2e12010a-f61a-40df-82b9-8de5615fda6d',
-    name: 'Magna',
+    name: 'magna',
     modDate: 'Tue Jun 23 1970 13:06:40 GMT+0000 (UTC)',
-    title: 'consectetur exercitation ex',
-    path: '/magna',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: true
+    title: 'Magna',
+    path: '/',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: 'c383b428-aab7-4642-99e5-528c32fd1db9',
-    name: 'Culpa',
+    name: 'culpa',
     modDate: 'Wed Jun 15 2011 08:34:35 GMT+0000 (UTC)',
-    title: 'aliquip nulla adipisicing',
-    path: '/culpa',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: true
+    title: 'Culpa',
+    path: '/',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: '5a177c9e-6d2a-4b87-b45a-80dd8e4e1e03',
-    name: 'Adipisicing',
+    name: 'adipisicing',
     modDate: 'Thu May 28 1998 02:57:04 GMT+0000 (UTC)',
-    title: 'sunt id officia',
-    path: '/adipisicing',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: true
+    title: 'Adipisicing',
+    path: '/',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: '9c36258c-e6ed-4cf9-8c01-ffb71180e017',
-    name: 'Aliqua',
+    name: 'aliqua',
     modDate: 'Mon Feb 20 1995 20:55:19 GMT+0000 (UTC)',
-    title: 'non eu consectetur',
-    path: '/aliqua',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
+    title: 'Aliqua',
+    path: '/',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: 'efa87098-20c5-4337-8aa8-310205794984',
-    name: 'Lorem',
+    name: 'lorem',
     modDate: 'Thu Jul 31 1975 15:45:04 GMT+0000 (UTC)',
-    title: 'voluptate nulla eiusmod',
-    path: '/lorem',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
+    title: 'Lorem',
+    path: '/',
+    type: TreeItemType.FOLDER
   },
   {
     identifier: 'd01d8fcd-e714-4613-a8af-88201613d425',
-    name: 'Nisi',
+    name: 'nisi',
     modDate: 'Fri Jun 30 1978 21:19:18 GMT+0000 (UTC)',
-    title: 'excepteur id quis',
-    path: '/nisi',
-    type: TreeAssetType.FOLDER,
-    showOnMenu: false
+    title: 'Nisi',
+    path: '/',
+    type: TreeItemType.FOLDER
   }
 ];

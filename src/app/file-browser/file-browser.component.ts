@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 
 import * as fromRoot from '../_main/store';
 import * as fromStore from './store';
-import { TreeFileItem } from './models/tree-file-item.model';
-import { FolderItem } from './models';
+import { TreeItem } from './models';
+
 
 @Component({
   selector: 'app-file-browser',
@@ -14,22 +14,22 @@ import { FolderItem } from './models';
   styleUrls: ['./file-browser.component.scss']
 })
 export class FileBrowserComponent implements OnInit {
-  treeFiles$: Observable<TreeFileItem[]>;
-  folders$: Observable<FolderItem[]>;
+  treeFiles$: Observable<TreeItem[]>;
+  folders$: Observable<TreeItem[]>;
   folderActive$: Observable<string>;
 
   constructor(private store: Store<fromStore.FileBrowserState>) {}
 
   ngOnInit() {
-    this.treeFiles$ = this.store.select(fromStore.getAllTreeFiles);
+    this.treeFiles$ = this.store.select(fromStore.getAllTreeItems);
     this.folders$ = this.store.select(fromStore.getAllFolders);
     this.folderActive$ = this.store.select(fromRoot.getRouterPath);
   }
 
-  onSelectedFolder(event: FolderItem): void {
+  onSelectedFolder(event: TreeItem): void {
     this.store.dispatch(
       new fromRoot.Go({
-        path: ['file-browser', event.path.slice(1)]
+        path: ['file-browser', event.name]
       })
     );
   }

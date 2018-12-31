@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { FolderItem } from '../../models';
+import { TreeItem } from '../../models';
 
 @Component({
   selector: 'app-folder-tree',
@@ -8,9 +8,9 @@ import { FolderItem } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FolderTreeComponent implements OnInit {
-  @Input() data: FolderItem[];
+  @Input() data: TreeItem[];
   @Input() active: string;
-  @Output() selected: EventEmitter<FolderItem> = new EventEmitter();
+  @Output() selected: EventEmitter<TreeItem> = new EventEmitter();
 
   constructor() { }
 

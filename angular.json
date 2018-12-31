@@ -147,5 +147,8 @@
       }
     }
   },
-  "defaultProject": "file-browser-ngrx"
+  "defaultProject": "file-browser-ngrx",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

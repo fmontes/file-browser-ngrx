@@ -3,9 +3,6 @@ import { createSelector } from '@ngrx/store';
 import * as fromFeature from '../reducers';
 import * as fromFolders from '../reducers/folders.reducer';
 
-import { FolderItem } from '../../models';
-
-
 // get the state inside the feature: file-browser
 export const getFoldersState = createSelector(
   fromFeature.getFileBrowserState,
@@ -15,14 +12,12 @@ export const getFoldersState = createSelector(
 // get the file trees from the state
 export const getFoldersEntities = createSelector(
   getFoldersState,
-  fromFolders.getFoldersEntities
+  fromFolders.selectEntities
 );
 
 export const getAllFolders = createSelector(
-  getFoldersEntities,
-  (entities: {[id: string]: FolderItem}) => {
-    return Object.keys(entities).map((id: string) => entities[id]);
-  }
+  getFoldersState,
+  fromFolders.selectAll
 );
 
 export const getFoldersLoading = createSelector(

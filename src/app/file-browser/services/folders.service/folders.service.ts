@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { FOLDERS } from 'src/data/db';
-import { FolderItem } from '../../models';
+import { ITEMS } from 'src/data/db';
+import { TreeItem, TreeItemType } from '../../models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,11 @@ import { FolderItem } from '../../models';
 export class FoldersService {
   constructor() {}
 
-  getItems(): Observable<FolderItem[]> {
+  getRootFolders(): Observable<TreeItem[]> {
     console.log(
-      `%cAPI CALL: FoldersService.getItems: FolderItem[]`,
+      `%cAPI CALL: FoldersService.getRootFolders: TreeItem[]`,
       'color: green; font-size: 1rem;'
     );
-    return of(FOLDERS);
+    return of(ITEMS.filter((item: TreeItem) => item.type === TreeItemType.FOLDER && item.path === '/'));
   }
 }

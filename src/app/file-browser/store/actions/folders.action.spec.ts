@@ -1,5 +1,5 @@
 import * as fromFolders from './folders.action';
-import { TreeAssetType } from '../../models';
+import { TreeItemType } from '../../models';
 
 describe('Folders Actions', () => {
   describe('LoadFolders Actions', () => {
@@ -8,7 +8,7 @@ describe('Folders Actions', () => {
         const action = new fromFolders.LoadFolders();
 
         expect({ ...action }).toEqual({
-          type: fromFolders.LOAD_FOLDERS
+          type: fromFolders.FolderActionTypes.LOAD_FOLDERS
         });
       });
     });
@@ -19,7 +19,7 @@ describe('Folders Actions', () => {
         const action = new fromFolders.LoadFoldersFail(payload);
 
         expect({ ...action }).toEqual({
-          type: fromFolders.LOAD_FOLDERS_FAIL,
+          type: fromFolders.FolderActionTypes.LOAD_FOLDERS_FAIL,
           payload
         });
       });
@@ -34,7 +34,7 @@ describe('Folders Actions', () => {
             modDate: 'Tue Jun 23 1970 13:06:40 GMT+0000 (UTC)',
             title: 'consectetur exercitation ex',
             path: '/magna',
-            type: TreeAssetType.FOLDER,
+            type: TreeItemType.FOLDER,
             showOnMenu: true
           },
           {
@@ -43,14 +43,14 @@ describe('Folders Actions', () => {
             modDate: 'Wed Jun 15 2011 08:34:35 GMT+0000 (UTC)',
             title: 'aliquip nulla adipisicing',
             path: '/culpa',
-            type: TreeAssetType.FOLDER,
+            type: TreeItemType.FOLDER,
             showOnMenu: true
           }
         ];
         const action = new fromFolders.LoadFoldersSuccess(payload);
 
         expect({ ...action }).toEqual({
-          type: fromFolders.LOAD_FOLDERS_SUCCESS,
+          type: fromFolders.FolderActionTypes.LOAD_FOLDERS_SUCCESS,
           payload
         });
       });
