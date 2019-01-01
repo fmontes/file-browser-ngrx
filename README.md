@@ -1,4 +1,19 @@
 # FileBrowserNgrx
+This is a File Browser built with Angular and NGRX.
+
+## Features:
+1. [Angular 7](https://angular.io/)
+2. [Angular Material](https://material.angular.io/)
+3. @ngrx:
+    - [@ngrx/store](https://github.com/ngrx/store) for state managements
+    - [@ngrx/effects](https://github.com/ngrx/effects) for side effects
+    - [@ngrx/entity](https://github.com/ngrx/entity-builds) to create entities
+    - @ngrx/router-store router state
+4. Services ready to hook with a backend.
+
+<img src="https://user-images.githubusercontent.com/751424/50569349-67a17c00-0d28-11e9-9a8c-f7844ab301b5.gif" />
+
+----------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
