@@ -1,6 +1,8 @@
 # FileBrowserNgrx
 This is a File Browser built with Angular and NGRX.
 
+## DEMO: [https://fmontes.github.io/file-browser-ngrx/file-browser](https://fmontes.github.io/file-browser-ngrx/file-browser)
+
 ## Features:
 1. [Angular 7](https://angular.io/)
 2. [Angular Material](https://material.angular.io/)
